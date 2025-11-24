@@ -1,0 +1,23 @@
+* \Theta\Sigma Emacs
+The theme used in my config \Theta\Sigma Emacs was inspired by an older theme of mine called TransSide. Vaguely inspired by a terminal theme called Farside(?), it used high contrast color combinations taken from the Trans Flag.
+
+[[file:images/dark-hc.png][High Contrast Dark Theme]]
+[[file:images/dark-lc.png][Low Contrast Dark Theme]]
+[[file:images/light.png][Light Theme]]
+
+* Principles
+This part is probably not interesting to most people, but its what I keep in mind when working on it.
+
+- WCAG AAA - as made famous by Protesiliaous Stavrou and his modus themes, I have endeavored to make every face combination meet a minimum of a 10:1 contrast ratio. The only exception to this is comments, which still are ~ 7:1
+- Different color families for different purposes. I categorize the kinds of elements that we see in emacs with as =static=, =interactable=, and =neutral=.
+- A strong emphasis is placed on styling default faces that are inherited by packages rather than styling the faces defined by those faces. Vertico, consult, corfu et.al define their own faces from scratch and will thus be exceptions
+
+* Usage
+The available variants are
+- =thetasigma-light=
+- =thetasigma-dark-low-contrast=
+- =thetasigma-dark-high-contrast=
+
+#+begin_src elisp
+(load-theme thetasigma-variant t)
+#+end_src
