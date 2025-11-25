@@ -2,7 +2,7 @@
 
 ;; Author: Skye
 ;; Version: 0.1
-;; Package-Requires: ((emacs "24.1"))
+;; Package-Requires: ((emacs "28.1"))
 ;; Homepage: https://github.com/skye-repos/thetasigma-theme
 ;; Keywords: faces, extensions
 
