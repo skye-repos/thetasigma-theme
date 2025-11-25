@@ -1,9 +1,9 @@
-* \Theta\Sigma Emacs
-The theme used in my config \Theta\Sigma Emacs was inspired by an older theme of mine called TransSide. Vaguely inspired by a terminal theme called Farside(?), it used high contrast color combinations taken from the Trans Flag.
+* \Theta \Sigma Emacs
+The theme used in my config \Theta \Sigma Emacs was inspired by an older theme of mine called TransSide. Vaguely inspired by a terminal theme called Farside(?), it used high contrast color combinations taken from the Trans Flag.
 
-[[file:images/dark-hc.png][High Contrast Dark Theme]]
-[[file:images/dark-lc.png][Low Contrast Dark Theme]]
-[[file:images/light.png][Light Theme]]
+[[file:images/dark-hc.png]]
+[[file:images/dark-lc.png]]
+[[file:images/light.png]]
 
 * Principles
 This part is probably not interesting to most people, but its what I keep in mind when working on it.
