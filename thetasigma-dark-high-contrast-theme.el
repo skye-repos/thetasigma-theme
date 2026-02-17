@@ -1,9 +1,10 @@
-(require-theme 'thetasigma-theme)
+;;; thetasigma-dark-high-contrast-theme.el --- High Contrast Dark theme
 
-(deftheme thetasigma-dark-high-contrast "High contrast & WCAG compliant dark theme"
-		  :family 'thetasigma
-		  :kind 'dark
-		  :background-mode 'dark)
+;;; Commentary:
+;; Ultra-High Contrast Dark mode
+
+;;; Code:
+(require-theme 'thetasigma-theme)
 
 (defcustom thetasigma-dark-high-contrast-colors
   '((foreground . "#FFD9FF")
@@ -23,12 +24,19 @@
     (neutral-0 . "#B9B0FE")
     (neutral-1 . "#C8A1FE")
     (neutral-2 . "#D790FE"))
-  "High Contrast Dark mode colors")
+  "High Contrast Dark mode colors.")
 
-(thetasigma-define-theme 'thetasigma-dark-high-contrast thetasigma-dark-high-contrast-colors)
+(deftheme thetasigma-dark-high-contrast "High contrast & WCAG compliant dark theme."
+		  :family 'thetasigma
+		  :kind 'dark
+		  :background-mode 'dark)
+
+(thetasigma-theme-define 'thetasigma-dark-high-contrast thetasigma-dark-high-contrast-colors)
 
 (provide-theme 'thetasigma-dark-high-contrast)
+(run-hooks 'thetasigma-theme-after-load-hook)
 (provide 'thetasigma-dark-high-contrast-theme)
+;;; thetasigma-dark-high-contrast-theme.el ends here
 ;; Local Variables:
 ;; eval: (rainbow-mode) (set-fill-column 70)
 ;; End:

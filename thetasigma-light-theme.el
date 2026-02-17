@@ -1,9 +1,10 @@
-(require-theme 'thetasigma-theme)
+;;; thetasigma-light-theme.el --- High Contrast light theme
 
-(deftheme thetasigma-light "Contrast rich & WCAG compliant light theme"
-		  :family 'thetasigma
-		  :kind 'light
-		  :background-mode 'light)
+;;; Commentary:
+;; High Contrast Light mode
+
+;;; Code:
+(require-theme 'thetasigma-theme)
 
 (defcustom thetasigma-light-colors
   '((foreground . "#04040C")
@@ -25,10 +26,17 @@
     (neutral-2 . "#67206E"))
   "Light mode colors")
 
-(thetasigma-define-theme 'thetasigma-light thetasigma-light-colors)
+(deftheme thetasigma-light "Contrast rich & WCAG compliant light theme"
+		  :family 'thetasigma
+		  :kind 'light
+		  :background-mode 'light)
+
+(thetasigma-theme-define 'thetasigma-light thetasigma-light-colors)
 
 (provide-theme 'thetasigma-light)
+(run-hooks 'thetasigma-theme-after-load-hook)
 (provide 'thetasigma-light-theme)
+;;; thetasigma-light-theme.el ends here
 ;; Local Variables:
 ;; eval: (rainbow-mode) (set-fill-column 70)
 ;; End:

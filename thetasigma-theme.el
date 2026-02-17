@@ -1,4 +1,5 @@
-;;; thetasigma-theme.el  --- Contrast rich WCAG compliant themes -*- lexical-binding:t -*-
+;;; thetasigma-theme.el  --- Contrast rich WCAG compliant themes
+;; -*- lexical-binding:t -*-
 
 ;; Author: Skye
 ;; Version: 0.1
@@ -33,8 +34,19 @@
 ;; Currently, three styles are offered - 2 dark themes and one light.  These values can be changed by the user in the =M-x customize= menus
 
 ;;; Code:
-(defmacro thetasigma-define-theme (theme-name theme-alist)
-  "A macro to define a theme-variant"
+(defgroup thetasigma nil
+  "Customization group for the ΘΣ theme."
+  :group 'faces)
+
+(defcustom thetasigma-theme-after-load-hook nil
+  "Hook run after a ΘΣ theme variant is loaded."
+  :type 'hook
+  :group 'thetasigma)
+
+(defmacro thetasigma-theme-define (theme-name theme-alist)
+  "A macro to define a theme-variant.
+Argument THEME-NAME name of theme.
+Argument THEME-ALIST alist of colors to be used in the macro."
   
   `(let* ((get-clr (lambda (key) (alist-get key ,theme-alist)))
 		 (class '((class color) (min-colors 89)))
@@ -74,7 +86,7 @@
 
 	 `(link ((,class :foreground ,interact-1 :underline t :weight semi-bold)))
 
-	 `(font-lock-builtin-face ((,class :foreground ,neutral-1 :distant-foreground ,bold-distant)))
+	 `(font-lock-builtin-face ((,class :foreground ,neutral-0 :distant-foreground ,bold-distant)))
 	 `(font-lock-doc-face ((,class :foreground ,neutral-1 :distant-foreground ,bold-distant :weight medium)))
 	 `(font-lock-comment-face ((,class :foreground ,subtle :distant-foreground ,bold-distant :weight extra-light)))
 	 `(font-lock-string-face ((,class :foreground ,interact-1 :distant-foreground ,bold-distant :weight medium)))
@@ -152,9 +164,7 @@
 
 	 `(ansi-color-bold ((,class :foreground ,bold :weight bold)))
 	 `(ansi-color-faint ((,class :foreground ,subtle)))
-	 `(ansi-color-inverse ((,class :foreground ,bg-overlay :background ,standout)))
-	 )
-	)
-  )
+	 `(ansi-color-inverse ((,class :foreground ,bg-overlay :background ,standout))))))
 
 (provide 'thetasigma-theme)
+;;; thetasigma-theme.el ends here
